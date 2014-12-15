@@ -25,7 +25,6 @@ import android.support.v17.leanback.app.BackgroundManager;
 import android.support.v17.leanback.app.BrowseFragment;
 import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.HeaderItem;
-import android.support.v17.leanback.widget.ImageCardView;
 import android.support.v17.leanback.widget.ListRow;
 import android.support.v17.leanback.widget.ListRowPresenter;
 import android.support.v17.leanback.widget.OnItemViewClickedListener;
@@ -42,6 +41,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.tvleanback.customized.SimplestCardPresenter;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -153,7 +153,7 @@ public class MainFragment extends BrowseFragment implements
                                HashMap<String, List<Movie>> data) {
 
         mRowsAdapter = new ArrayObjectAdapter(new ListRowPresenter());
-        CardPresenter cardPresenter = new CardPresenter();
+        SimplestCardPresenter cardPresenter = new SimplestCardPresenter();
 
         int i = 0;
 
@@ -279,7 +279,7 @@ public class MainFragment extends BrowseFragment implements
 
                 Bundle bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(
                         getActivity(),
-                        ((ImageCardView) itemViewHolder.view).getMainImageView(),
+                        itemViewHolder.view,
                         DetailsActivity.SHARED_ELEMENT_NAME).toBundle();
                 getActivity().startActivity(intent, bundle);
             } else if (item instanceof String) {
