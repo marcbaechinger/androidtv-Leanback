@@ -26,6 +26,8 @@ import java.net.URISyntaxException;
  */
 public class Movie implements Serializable {
     static final long serialVersionUID = 727566175075960653L;
+    public static final int MAX_RATING = 5;
+
     private static long count = 0;
     private long id;
     private String title;
@@ -35,6 +37,7 @@ public class Movie implements Serializable {
     private String videoUrl;
     private String studio;
     private String category;
+    private int rating;
 
     public Movie() {
     }
@@ -109,6 +112,14 @@ public class Movie implements Serializable {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     public URI getBackgroundImageURI() {

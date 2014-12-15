@@ -103,7 +103,7 @@ public class VideoProvider {
                         studio = video.getString(TAG_STUDIO);
                         categoryList.add(buildMovieInfo(category_name, title, description, studio,
                                 videoUrl, cardImageUrl,
-                                bgImageUrl));
+                                bgImageUrl, (int)(Math.random() * 5 + 1)));
                     }
                     sMovieList.put(category_name, categoryList);
                 }
@@ -118,7 +118,8 @@ public class VideoProvider {
                                         String studio,
                                         String videoUrl,
                                         String cardImageUrl,
-                                        String bgImageUrl) {
+                                        String bgImageUrl,
+                                        int rating) {
         Movie movie = new Movie();
         movie.setId(Movie.getCount());
         Movie.incCount();
@@ -129,6 +130,7 @@ public class VideoProvider {
         movie.setCardImageUrl(cardImageUrl);
         movie.setBackgroundImageUrl(bgImageUrl);
         movie.setVideoUrl(videoUrl);
+        movie.setRating(rating);
 
         return movie;
     }
