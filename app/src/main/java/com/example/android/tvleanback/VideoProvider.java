@@ -102,8 +102,8 @@ public class VideoProvider {
                                 video.getString(TAG_CARD_THUMB));
                         studio = video.getString(TAG_STUDIO);
                         categoryList.add(buildMovieInfo(category_name, title, description, studio,
-                                videoUrl, cardImageUrl,
-                                bgImageUrl, (int)(Math.random() * 5 + 1)));
+                                videoUrl, cardImageUrl, bgImageUrl,
+                                (int)(Math.random() * 5 + 1)));
                     }
                     sMovieList.put(category_name, categoryList);
                 }

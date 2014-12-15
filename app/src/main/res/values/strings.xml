@@ -114,5 +114,10 @@
         wings, Maleficent has an idyllic life growing up in a peaceable forest kingdom, until one
         day when an invading army of humans threatens the harmony of the land.
     </string>
+    <string name="rating_0">rating_0</string>
+    <string name="rating_1">rating_1</string>
+    <string name="rating_2">rating_2</string>
+    <string name="rating_3">rating_3</string>
+    <string name="rating_4">rating_4</string>
 
 </resources>
