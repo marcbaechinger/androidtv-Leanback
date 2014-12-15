@@ -41,7 +41,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.tvleanback.customized.SimplestCardPresenter;
+import com.example.android.tvleanback.customized.RatingCardPresenter;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -153,7 +153,7 @@ public class MainFragment extends BrowseFragment implements
                                HashMap<String, List<Movie>> data) {
 
         mRowsAdapter = new ArrayObjectAdapter(new ListRowPresenter());
-        SimplestCardPresenter cardPresenter = new SimplestCardPresenter();
+        RatingCardPresenter cardPresenter = new RatingCardPresenter();
 
         int i = 0;
 
