@@ -202,9 +202,7 @@ public class PlaybackActivity extends Activity {
         mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
-                if (mPlaybackState == LeanbackPlaybackState.PLAYING) {
-                    mVideoView.start();
-                }
+                playPause(true);
             }
         });
 
@@ -281,7 +279,6 @@ public class PlaybackActivity extends Activity {
                 setVideoPath(movie.getVideoUrl());
                 mPlaybackState = LeanbackPlaybackState.PAUSED;
                 updateMetadata(movie);
-                playPause(extras.getBoolean(AUTO_PLAY));
             }
         }
 
